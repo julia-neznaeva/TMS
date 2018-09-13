@@ -1,0 +1,399 @@
+  {
+
+      Boxes = 1M
+
+      Cases = 1M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "41-ITC_BFYY0V"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 3M
+
+      PercentDiscount = 0M
+
+      Price = 10M
+
+      Qty = 2M
+
+      QtyShip = 1M
+
+      Sequence = 3M
+
+      Txbl = <null>
+
+      Unit = "LB"
+
+      Upc = <null>
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 1M
+
+      Cases = 1M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "41-ITC_QNNXN9"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 5M
+
+      PercentDiscount = 0M
+
+      Price = 10M
+
+      Qty = 2M
+
+      QtyShip = 1M
+
+      Sequence = 5M
+
+      Txbl = <null>
+
+      Unit = "LB"
+
+      Upc = <null>
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 0M
+
+      Cases = 1M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "41-ITC_Z0XFAO"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 6M
+
+      PercentDiscount = 0M
+
+      Price = 10M
+
+      Qty = 2M
+
+      QtyShip = 1M
+
+      Sequence = 6M
+
+      Txbl = <null>
+
+      Unit = "CS"
+
+      Upc = <null>
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 0M
+
+      Cases = 0M
+
+      Comm = 0M
+
+      Cost = 0.0400M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = "DELIVERY CHARGES"
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "81-DC"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 10M
+
+      PercentDiscount = 0M
+
+      Price = 0M
+
+      Qty = 1M
+
+      QtyShip = 4M
+
+      Sequence = 8M
+
+      Txbl = <null>
+
+      Unit = "CS"
+
+      Upc = "9999999900"
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 0M
+
+      Cases = 0M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "ITC_QONQXT5L8"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 7M
+
+      PercentDiscount = 0M
+
+      Price = 10M
+
+      Qty = 2M
+
+      QtyShip = 1M
+
+      Sequence = 7M
+
+      Txbl = <null>
+
+      Unit = "CS"
+
+      Upc = <null>
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 0M
+
+      Cases = 0M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "MSG-9"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 2M
+
+      PercentDiscount = 0M
+
+      Price = 0M
+
+      Qty = 3M
+
+      QtyShip = 0M
+
+      Sequence = 1M
+
+      Txbl = <null>
+
+      Unit = "CS"
+
+      Upc = "0000000000"
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 0M
+
+      Cases = 0M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "MSG-9"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 1M
+
+      PercentDiscount = 0M
+
+      Price = 0M
+
+      Qty = 3M
+
+      QtyShip = 0M
+
+      Sequence = 2M
+
+      Txbl = <null>
+
+      Unit = "CS"
+
+      Upc = "0000000000"
+
+   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
+
+   {
+
+      Boxes = 0M
+
+      Cases = 0M
+
+      Comm = 0M
+
+      Cost = 0M
+
+      CrdType = 0M
+
+      Cust = "ALTEST"
+
+      Dbp = 0
+
+      Description = <null>
+
+      DollarDiscount = 0M
+
+      InvoiceNumber = 1849191M
+
+      InvoiceNumber2 = 0M
+
+      Item = "MSG-9"
+
+      Item2 = <null>
+
+      OrderNumber = 1699739M
+
+      Osq = 4M
+
+      PercentDiscount = 0M
+
+      Price = 0M
+
+      Qty = 3M
+
+      QtyShip = 0M
+
+      Sequence = 4M
+
+      Txbl = <null>
+
+      Unit = "CS"
+
+      Upc = "0000000000"
+
+   }}.
