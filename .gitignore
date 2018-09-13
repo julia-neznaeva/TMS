@@ -1,399 +1,234 @@
-  {
-
-      Boxes = 1M
-
-      Cases = 1M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "41-ITC_BFYY0V"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 3M
-
-      PercentDiscount = 0M
-
-      Price = 10M
-
-      Qty = 2M
-
-      QtyShip = 1M
-
-      Sequence = 3M
-
-      Txbl = <null>
-
-      Unit = "LB"
-
-      Upc = <null>
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 1M
-
-      Cases = 1M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "41-ITC_QNNXN9"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 5M
-
-      PercentDiscount = 0M
-
-      Price = 10M
-
-      Qty = 2M
-
-      QtyShip = 1M
-
-      Sequence = 5M
-
-      Txbl = <null>
-
-      Unit = "LB"
-
-      Upc = <null>
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 0M
-
-      Cases = 1M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "41-ITC_Z0XFAO"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 6M
-
-      PercentDiscount = 0M
-
-      Price = 10M
-
-      Qty = 2M
-
-      QtyShip = 1M
-
-      Sequence = 6M
-
-      Txbl = <null>
-
-      Unit = "CS"
-
-      Upc = <null>
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 0M
-
-      Cases = 0M
-
-      Comm = 0M
-
-      Cost = 0.0400M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = "DELIVERY CHARGES"
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "81-DC"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 10M
-
-      PercentDiscount = 0M
-
-      Price = 0M
-
-      Qty = 1M
-
-      QtyShip = 4M
-
-      Sequence = 8M
-
-      Txbl = <null>
-
-      Unit = "CS"
-
-      Upc = "9999999900"
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 0M
-
-      Cases = 0M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "ITC_QONQXT5L8"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 7M
-
-      PercentDiscount = 0M
-
-      Price = 10M
-
-      Qty = 2M
-
-      QtyShip = 1M
-
-      Sequence = 7M
-
-      Txbl = <null>
-
-      Unit = "CS"
-
-      Upc = <null>
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 0M
-
-      Cases = 0M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "MSG-9"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 2M
-
-      PercentDiscount = 0M
-
-      Price = 0M
-
-      Qty = 3M
-
-      QtyShip = 0M
-
-      Sequence = 1M
-
-      Txbl = <null>
-
-      Unit = "CS"
-
-      Upc = "0000000000"
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 0M
-
-      Cases = 0M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "MSG-9"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 1M
-
-      PercentDiscount = 0M
-
-      Price = 0M
-
-      Qty = 3M
-
-      QtyShip = 0M
-
-      Sequence = 2M
-
-      Txbl = <null>
-
-      Unit = "CS"
-
-      Upc = "0000000000"
-
-   }, TestAutomation.BL.Models.Billing.ResponceModels.InvoiceDetailInfo
-
-   {
-
-      Boxes = 0M
-
-      Cases = 0M
-
-      Comm = 0M
-
-      Cost = 0M
-
-      CrdType = 0M
-
-      Cust = "ALTEST"
-
-      Dbp = 0
-
-      Description = <null>
-
-      DollarDiscount = 0M
-
-      InvoiceNumber = 1849191M
-
-      InvoiceNumber2 = 0M
-
-      Item = "MSG-9"
-
-      Item2 = <null>
-
-      OrderNumber = 1699739M
-
-      Osq = 4M
-
-      PercentDiscount = 0M
-
-      Price = 0M
-
-      Qty = 3M
-
-      QtyShip = 0M
-
-      Sequence = 4M
-
-      Txbl = <null>
-
-      Unit = "CS"
-
-      Upc = "0000000000"
-
-   }}.
+*.suo
+*.user
+*.sln.docstates
+
+obj
+bin
+packages
+lib1
+
+# TMS Ignore
+/Apex/.vs
+/Apex/.vs/Apex/v15
+/Apex/.vs/config
+Apex.v11.suo
+/Apex/Apex/Apex.csproj.user
+/Apex/Apex/dist
+/Apex/Apex/prod
+/Apex/Apex/package-lock.json
+/Apex/.idea
+
+## Ignore Visual Studio temporary files, build results, and
+## files generated by popular Visual Studio add-ons.
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# DNX
+project.lock.json
+artifacts/
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# JustCode is a .NET coding add-in
+.JustCode
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+## TODO: Comment the next line if you want to checkin your
+## web deploy settings but do note that will include unencrypted
+## passwords
+#*.pubxml
+
+*.publishproj
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# Windows Azure Build Output
+csx/
+*.build.csdef
+
+# Windows Store app package directory
+AppPackages/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Others
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+node_modules/
+orleans.codegen.cs
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# LightSwitch generated files
+GeneratedArtifacts/
+_Pvt_Extensions/
+ModelManifest.xml
+/tash drop
+/ApexAutoTests.zip
