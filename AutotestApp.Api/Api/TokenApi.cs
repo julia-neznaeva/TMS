@@ -12,7 +12,7 @@ namespace AutotestApp.Common.Api
         {
             _request = new RestRequest(ApiUrl.Token);
             _request.Method = Method.POST;
-            DearClient.Authenticator = new SimpleAuthenticator("username", "kate.test21@gmail.com", "password", "123456789");
+            DearClient.Authenticator = new SimpleAuthenticator("username", "", "password", "");
         }
 
         public void GetToken()
