@@ -1,4 +1,6 @@
-﻿using AutotestApp.Common.Api.InventoryApi;
+﻿using AutotestApp.Api.Models.Api.ResponseData.CustomerBillingAddress;
+using AutotestApp.Bl;
+using AutotestApp.Common.Api.InventoryApi;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -14,11 +16,13 @@ namespace AutotestApp.Api.Api.Quote1StepApi
         {
             _request = new RestRequest(ApiUrl.GetCustomerBillingAddress);
             _request.Method = Method.GET;
+            _request.AddHeader("Authorization", Token);
         }
 
-        public void Request()
+        public BilingAddressTemp Request()
         {
-            DearClient.Execute(_request);
+            var responce =  DearClient.ExecuteUnzipped<BilingAddressTemp>(_request);
+            return responce.Data;
         }
     }
 }

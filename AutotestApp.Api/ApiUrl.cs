@@ -13,7 +13,7 @@ namespace AutotestApp.Api
 
         public static String Login => $"{ApiBaseUrl}product";
 
-        public static String Token => $"{BaseUrl}/TOKEN";
+        public static String Token => $"{ApiBaseUrl}/TOKEN";
 
         public static String GetCustomerBillingAddress => $"{ApiBaseUrl}/Quote/GetCustomerBillingAddress";
 

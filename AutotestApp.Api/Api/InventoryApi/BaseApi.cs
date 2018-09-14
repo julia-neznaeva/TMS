@@ -2,6 +2,7 @@
 using AutotestApp.Common.Сonstants;
 using NUnit.Framework;
 using RestSharp;
+using System;
 using System.Net;
 using System.Reflection;
 
@@ -10,6 +11,8 @@ namespace AutotestApp.Common.Api.InventoryApi
     public class BaseApi : BaseTest
     {
         private RestClient _restClient;
+
+        protected static String Token; 
 
         protected RestClient DearClient => _restClient ?? (_restClient = new RestClient(ApiUrl.ApiBaseUrl));
 
@@ -29,10 +32,10 @@ namespace AutotestApp.Common.Api.InventoryApi
 
             request.RequestFormat = DataFormat.Json;
 
-            foreach (PropertyInfo property in bodyModel.GetType().GetProperties())
-            {
-                request.AddOrUpdateParameter(property.Name, property.GetValue(bodyModel), ParameterType.QueryString);
-            }
+            //foreach (PropertyInfo property in bodyModel.GetType().GetProperties())
+            //{
+            //    request.AddOrUpdateParameter(property.Name, property.GetValue(bodyModel), ParameterType.QueryString);
+            //}
 
             var response = DearClient.Execute<T>(request);
 
