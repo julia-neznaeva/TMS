@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96E306CE-0243-478E-AEA4-190EB31E6DCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutotestApp.Dal</RootNamespace>
+    <AssemblyName>AutotestApp.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\smart_csharp_mini\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AddressContactModel.cs" />
+    <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\CustomerInviteModel.cs" />
+    <Compile Include="Models\LocationModel.cs" />
+    <Compile Include="Models\UserPersonalInfoModel.cs" />
+    <Compile Include="Repositories\AddressContactRepositoriy.cs" />
+    <Compile Include="Repositories\AddressRepositoriy.cs" />
+    <Compile Include="Repositories\ClientRepositoriy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CustomerInviteRepositoriy.cs" />
+    <Compile Include="Repositories\LocationRepositoriy.cs" />
+    <Compile Include="Repositories\RepositoriyFactory.cs" />
+    <Compile Include="Repositories\UserPersonalInfoRepositoriy.cs" />
+    <Compile Include="Session\DapperSession.cs" />
+    <Compile Include="Session\ISession.cs" />
+    <Compile Include="Session\SessionFactory.cs" />
+    <Compile Include="SqlContext\SqlDataContextDapper.cs" />
+    <Compile Include="SqlContext\SqlDataContextBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutotestApp.Common\AutotestApp.Common.csproj">
+      <Project>{329AF452-A906-4AF3-AA8F-3D86D638E935}</Project>
+      <Name>AutotestApp.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

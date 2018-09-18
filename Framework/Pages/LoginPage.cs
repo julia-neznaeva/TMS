@@ -1,15 +1,22 @@
 ﻿using AutotestsApp.Gui.Elements;
 using AutotestsApp.Gui.Pages;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace AutotestsApp.Gui.Forms
 {
     public class LoginPage
     {
-        private TextBox _email => new TextBox(By.XPath("//input[@type = 'email']"), "Email input");
-        private TextBox _password=>new TextBox(By.XPath("//input[@type = 'password']"), "Password input");
-        private Button _signIn => new Button(By.XPath("//button[@type = 'submit']"), "SIGN IN button");
+        private TextBox _email => new TextBox(By.XPath("//input[@type = 'email']"), "Email input", _driver);
+        private TextBox _password=>new TextBox(By.XPath("//input[@type = 'password']"), "Password input", _driver);
+        private Button _signIn => new Button(By.XPath("//button[@type = 'submit']"), "SIGN IN button", _driver);
+        private IWebDriver _driver;
+
+        public LoginPage(IWebDriver driver)
+        {
+            _driver = driver;
+        }
 
         public LoginPage EnterEmail(String email)
         {
@@ -28,12 +35,13 @@ namespace AutotestsApp.Gui.Forms
             _signIn.Click();
         }
 
-        public HomePage LogIn(String email, String password)
+        public void LogIn(String email, String password)
         {
             EnterEmail(email);
             EnterPassword(password);
             ClickOnSignIn();
-            return new HomePage();
+            new WebDriverWait(_driver, TimeSpan.FromSeconds(5)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.UrlToBe("http://mycarriertms.dotnet.itechcraft.com/customers/home"));
+
         }
 
 

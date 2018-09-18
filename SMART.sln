@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotetsApp.Gui", "AutotetsApp.Gui.csproj", "{420D4ED4-F2DB-4FB3-AC7F-C6E7733A401C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.Dal", "c:\users\juliia\documents\visual studio 2017\Projects\AutotestApp.Dal\AutotestApp.Dal.csproj", "{96E306CE-0243-478E-AEA4-190EB31E6DCF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.Common", "AutotestApp.Common\AutotestApp.Common.csproj", "{329AF452-A906-4AF3-AA8F-3D86D638E935}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.Api", "AutotestApp.Api\AutotestApp.Api.csproj", "{8E1DC2BC-50B0-4C77-B15C-F5EF8597AECF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.ApiTest", "AutotestApp.ApiTest\AutotestApp.ApiTest.csproj", "{E9F9ABCC-0671-4AE6-A289-F84F3058D984}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.Bl", "c:\users\juliia\documents\visual studio 2017\Projects\AutotestApp.Bl\AutotestApp.Bl.csproj", "{EB91F261-50A3-46F4-B1AC-EA2AD38BE9B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.Dal", "AutotestApp.Dal\AutotestApp.Dal.csproj", "{96E306CE-0243-478E-AEA4-190EB31E6DCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotestApp.Bl", "AutotestApp.Bl\AutotestApp.Bl.csproj", "{EB91F261-50A3-46F4-B1AC-EA2AD38BE9B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{420D4ED4-F2DB-4FB3-AC7F-C6E7733A401C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{420D4ED4-F2DB-4FB3-AC7F-C6E7733A401C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{420D4ED4-F2DB-4FB3-AC7F-C6E7733A401C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{329AF452-A906-4AF3-AA8F-3D86D638E935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{329AF452-A906-4AF3-AA8F-3D86D638E935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{329AF452-A906-4AF3-AA8F-3D86D638E935}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +37,10 @@ Global
 		{E9F9ABCC-0671-4AE6-A289-F84F3058D984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9F9ABCC-0671-4AE6-A289-F84F3058D984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9F9ABCC-0671-4AE6-A289-F84F3058D984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E306CE-0243-478E-AEA4-190EB31E6DCF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB91F261-50A3-46F4-B1AC-EA2AD38BE9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB91F261-50A3-46F4-B1AC-EA2AD38BE9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB91F261-50A3-46F4-B1AC-EA2AD38BE9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU

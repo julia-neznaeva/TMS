@@ -95,13 +95,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutotestApp.Bl\AutotestApp.Bl.csproj">
+      <Project>{eb91f261-50a3-46f4-b1ac-ea2ad38be9b2}</Project>
+      <Name>AutotestApp.Bl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AutotestApp.Common\AutotestApp.Common.csproj">
       <Project>{329AF452-A906-4AF3-AA8F-3D86D638E935}</Project>
       <Name>AutotestApp.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="c:\users\juliia\documents\visual studio 2017\Projects\AutotestApp.Bl\AutotestApp.Bl.csproj">
-      <Project>{eb91f261-50a3-46f4-b1ac-ea2ad38be9b2}</Project>
-      <Name>AutotestApp.Bl</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

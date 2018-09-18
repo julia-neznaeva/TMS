@@ -5,6 +5,6 @@ namespace AutotestsApp.Gui.Elements
 {
     public class Button : BaseElement
     {
-        public Button(By locator, String name) : base(locator, name) { }
+        public Button(By locator, String name, IWebDriver driver) : base(locator, name, driver) { }
     }
 }

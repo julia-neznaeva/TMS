@@ -12,5 +12,6 @@ namespace AutotestsApp.Gui.Forms
             XmlConfigurator.Configure();
             Log = new Logger(LogManager.GetLogger(typeof(BaseEntity)));
         }
+
     }
 }

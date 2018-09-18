@@ -5,7 +5,7 @@ namespace AutotestsApp.Gui.Elements
 {
     public class TextBox : BaseElement
     {
-        public TextBox(By locator, String name) : base(locator, name){}
+        public TextBox(By locator, String name, IWebDriver driver) : base(locator, name, driver){}
 
         public void SetText(String text)
         {

@@ -9,21 +9,22 @@ namespace AutotestsApp.Gui.Elements
 {
     public class BaseElement : BaseEntity
     {
-        //private readonly RemoteWebElement _element;
         private readonly String _name;
         private readonly By _locator;
-        private  Browser _browser=> new Browser().GetInstance();
+        private readonly IWebDriver _driver;
+        protected IWebDriver Driver => _driver;
 
-        protected BaseElement(By locator, String name)
+        protected BaseElement(By locator, String name, IWebDriver driver)
         {
             this._name = name;
             this._locator = locator;
+            _driver = driver;
         }
 
         protected RemoteWebElement GetElement()
         {   
             WaitForElementPresent();
-            return (RemoteWebElement)_browser.GetDriver().FindElement(_locator); ;
+            return (RemoteWebElement)Driver.FindElement(_locator); 
         }
 
         protected String GetName()
@@ -44,21 +45,26 @@ namespace AutotestsApp.Gui.Elements
             Log.Info(String.Format("{0} :: click", GetName()));
         }
 
+        public String GetText()
+        {
+            return GetElement().Text;
+        }
+
         public Boolean IsPresent()
         {
-            bool isPresent = _browser.GetDriver().FindElements(_locator).Count > 0;
+            bool isPresent = Driver.FindElements(_locator).Count > 0;
             Log.Info(GetName() + " : is present : " + isPresent);
             return isPresent;
         }
 
         protected void WaitForElementPresent()
         {
-            var wait = new WebDriverWait(_browser.GetDriver(), TimeSpan.FromMilliseconds(Convert.ToDouble(Configuration.GetTimeout())));
+            var wait = new WebDriverWait(Driver, TimeSpan.FromMilliseconds(Convert.ToDouble(Configuration.GetTimeout())));
             try
             {
                 wait.Until(waiting =>
                 {
-                    var webElements = _browser.GetDriver().FindElements(_locator);
+                    var webElements = Driver.FindElements(_locator);
                     return webElements.Count != 0;
                 });
             }
@@ -70,24 +76,24 @@ namespace AutotestsApp.Gui.Elements
 
         protected void WaitElementToBeClickable()
         {
-            new WebDriverWait(_browser.GetDriver(), TimeSpan.FromSeconds(5)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(_locator));
+            new WebDriverWait(Driver, TimeSpan.FromSeconds(5)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(_locator));
         }
 
         protected void WaitElementToBeVisible()
         {
-            new WebDriverWait(_browser.GetDriver(), TimeSpan.FromSeconds(5)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(_locator));
+            new WebDriverWait(Driver, TimeSpan.FromSeconds(5)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(_locator));
         }
 
         public  void WaitForElementPresent(By locator, String name)
         {
-            var wait = new WebDriverWait(Provider.Instance, TimeSpan.FromMilliseconds(Convert.ToDouble(Configuration.GetTimeout())));
+            var wait = new WebDriverWait(new PagesFactory().Driver, TimeSpan.FromMilliseconds(Convert.ToDouble(Configuration.GetTimeout())));
             try
             {
                 wait.Until(waiting =>
                 {
                     try
                     {
-                        var webElements = _browser.GetDriver().FindElements(locator);
+                        var webElements = Driver.FindElements(locator);
                         return webElements.Count != 0;
                     }
                     catch (Exception )

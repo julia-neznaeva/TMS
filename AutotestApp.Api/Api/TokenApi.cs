@@ -1,10 +1,10 @@
 ﻿using AutotestApp.Api;
 using AutotestApp.Common.Api.InventoryApi;
-using AutotestApp.Bl;
 using RestSharp;
 using RestSharp.Authenticators;
 using System;
 using AutotestApp.Api.Models.Api.ResponseData.Token;
+using AutotestApp.Bl;
 
 namespace AutotestApp.Common.Api
 {

@@ -2,42 +2,50 @@
 using NUnit.Framework;
 using AutotestsApp.Gui.Forms;
 using AutotetsApp.Gui.Framework;
+using AutotestsApp.Gui.Pages;
+using AutotetsApp.Gui.Framework.Pages;
+using System.Collections.Generic;
 
 namespace AutotestsApp.Gui.Tests
 {
     public class DemoTest : BaseTest
     {
-        private readonly String username = RunConfigurator.GetValue("username");
-        private readonly String password = RunConfigurator.GetValue("password");
-        
+        LandingPage LandingPage => PageFactory.GetPage<LandingPage>();
+        LoginPage LoginPage => PageFactory.GetPage<LoginPage>();
+        HomePage HomePage => PageFactory.GetPage<HomePage>();
+        QuotePage QuotePage => PageFactory.GetPage<QuotePage>();
+
+        private const String ORIGINAL_VALIDATION_MESSAGE = "Origin address is required";
+        private const String DESTINATION_VALIDATION_MESSAGE = "Destination address is required";
+
         [Test]
-        public void LoginSuccsesulyTest()
+        public void AllEmpyFieldValidation()
         {
-            Log.Step(1);
-            LandingPage landingPage = new LandingPage();
+            LandingPage.Open();
 
-            Log.Step(2);
-            landingPage.SignIn().
-                LogIn("kate.test21@gmail.com", "123456789");
+            LandingPage.SignIn();
 
-            Assert.AreEqual("http://mycarriertms.dotnet.itechcraft.com/customers/home", Provider.Instance.Url, "User was not dirrect on Home page");
+            LoginPage.LogIn("kate.test21@gmail.com", "123456789");
 
-            Log.Step(3);
+            QuotePage.Open().ClickOnSelectCarrier();
+
+            AssertsAccumulator.Accumulate(() => Assert.AreEqual(ORIGINAL_VALIDATION_MESSAGE, QuotePage.GetOriginValidationMessage()));
+
+            AssertsAccumulator.Accumulate(() => Assert.AreEqual(DESTINATION_VALIDATION_MESSAGE, QuotePage.GetDestinationValidationMessage()));
         }
 
         [Test]
-        public void RunTest1()
+        public void AllEmpyFieldValidation1()
         {
-            Log.Step(1);
-            LandingPage landingPage = new LandingPage();
+            LandingPage.Open();
 
-            Log.Step(2);
-            landingPage.SignIn().
-                LogIn("kate.test21@gmail.com", "123456789");
+            LandingPage.SignIn();
 
-            Assert.AreEqual("http://mycarriertms.dotnet.itechcraft.com/customers/home", Provider.Instance.Url, "User was not dirrect on Home page");
+            LoginPage.LogIn("kate.test21@gmail.com", "123456789");
 
-            Log.Step(3);
-        }
+            QuotePage.Open().ClickOnSelectCarrier().SetOriginallAddress("RT Rotisserie, 101 Oak Street, San Francisco, CA 94102, USA");
+
+      }
+
     }
 }

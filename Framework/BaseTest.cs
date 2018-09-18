@@ -1,4 +1,6 @@
-﻿using AutotetsApp.Gui.Framework;
+﻿using AutotestApp.Common;
+using AutotetsApp.Gui.Framework;
+using AutotetsApp.Gui.Framework.Pages;
 using NUnit.Framework;
 using System.Diagnostics;
 
@@ -6,25 +8,28 @@ using System.Diagnostics;
 namespace AutotestsApp.Gui.Forms
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.All)]
+    [NonParallelizable]
     public class BaseTest : BaseEntity
     {
-        public Browser Browser = new Browser();
+        protected PagesFactory PageFactory { get; private set; }
+        protected AssertsAccumulator AssertsAccumulator = new AssertsAccumulator();
+
         [SetUp]
         public void SetUp()
-       {
-            Provider.Instance.Navigate().GoToUrl(Configuration.GetBaseUrl());
+        {
+            PageFactory = new PagesFactory();
         }
 
         [TearDown]
         public void TearDown()
         {
+            PageFactory.CloseDriver();
+
             var processes = Process.GetProcessesByName(Configuration.GetBrowser());
             foreach (var process in processes)
             {
                 process.Kill();
             }
-            //Browser.GetDriver().Quit();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutotestApp.Api.Api.Quote1StepApi;
 using AutotestApp.Api.Models.Api.ResponseData.CustomerBillingAddress;
+using AutotestApp.Bl.QuoteServices;
 using AutotestApp.Common.Api;
-using AutotestApp.Common.Api.InventoryApi;
 using AutotestApp.Dal;
 using NUnit.Framework;
 using System;
@@ -12,6 +12,8 @@ namespace ClassLibrary2
     [TestFixture]
     public class GetCustomerBillingAddressApiTests
     {
+        private BillingAddressService _billingAdressService = new BillingAddressService();
+        
         [OneTimeSetUp]
         public void SetToken()
         {
@@ -20,7 +22,6 @@ namespace ClassLibrary2
             tokenApi.SetToken(token);
         }
 
-
         [Test]
         public void FirstTest()
         {
@@ -28,11 +29,11 @@ namespace ClassLibrary2
             tokenApi.GetToken();
 
             GetCustomerBillingAddressApi getCustomerBillingAddressApi = new GetCustomerBillingAddressApi();
+            List<Client> client = new ClientRepository().GetClient();
 
-            BilingAddressTemp result =  getCustomerBillingAddressApi.Request();
+            BilingAddressTemp apiResult =  getCustomerBillingAddressApi.Request();
 
-            //List<Client> clients = new ClientRepository().GetClient();
-
+            var element = _billingAdressService.GetBillingAddress("kate.test21@gmail.com"); 
         }
 
     }

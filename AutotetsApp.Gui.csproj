@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AutotetsApp.Gui</RootNamespace>
     <AssemblyName>AutotetsApp.Gui</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -83,21 +84,25 @@
   <ItemGroup>
     <Compile Include="Framework\BaseEntity.cs" />
     <Compile Include="Framework\BaseTest.cs" />
-    <Compile Include="Framework\Browser.cs" />
     <Compile Include="Framework\BrowserFactory.cs" />
     <Compile Include="Framework\Configuration.cs" />
-    <Compile Include="Framework\DriverProvider.cs" />
+    <Compile Include="Framework\Elements\Autocomplite.cs" />
+    <Compile Include="Framework\Elements\CheckBox.cs" />
+    <Compile Include="Framework\Elements\Dropdown.cs" />
+    <Compile Include="Framework\Elements\NumericStepper.cs" />
+    <Compile Include="Framework\Elements\Validation.cs" />
+    <Compile Include="Framework\PageFactory.cs" />
     <Compile Include="Framework\Elements\BaseElement.cs" />
     <Compile Include="Framework\Elements\Button.cs" />
     <Compile Include="Framework\Elements\Link.cs" />
     <Compile Include="Framework\Elements\TextBox.cs" />
     <Compile Include="Framework\Forms\BaseForm.cs" />
+    <Compile Include="Framework\Pages\HandlingUnit.cs" />
     <Compile Include="Framework\Pages\HomePage.cs" />
     <Compile Include="Framework\Pages\LandingPage.cs" />
     <Compile Include="Framework\Pages\LoginPage.cs" />
-    <Compile Include="Framework\Logger.cs" />
+    <Compile Include="Framework\Pages\PageFactory.cs" />
     <Compile Include="Framework\Pages\QuotePage.cs" />
-    <Compile Include="Framework\RunConfigurator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ValidationTest.cs" />
   </ItemGroup>
@@ -124,6 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AutotestApp.Common\AutotestApp.Common.csproj">
+      <Project>{329af452-a906-4af3-aa8f-3d86d638e935}</Project>
+      <Name>AutotestApp.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

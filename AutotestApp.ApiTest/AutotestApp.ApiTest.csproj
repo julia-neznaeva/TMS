@@ -67,7 +67,11 @@
       <Project>{8E1DC2BC-50B0-4C77-B15C-F5EF8597AECF}</Project>
       <Name>AutotestApp.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="c:\users\juliia\documents\visual studio 2017\Projects\AutotestApp.Dal\AutotestApp.Dal.csproj">
+    <ProjectReference Include="..\AutotestApp.Bl\AutotestApp.Bl.csproj">
+      <Project>{EB91F261-50A3-46F4-B1AC-EA2AD38BE9B2}</Project>
+      <Name>AutotestApp.Bl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutotestApp.Dal\AutotestApp.Dal.csproj">
       <Project>{96E306CE-0243-478E-AEA4-190EB31E6DCF}</Project>
       <Name>AutotestApp.Dal</Name>
     </ProjectReference>
