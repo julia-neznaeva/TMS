@@ -17,6 +17,6 @@ namespace AutotestApp.Api
 
         public static String GetCustomerBillingAddress => $"{ApiBaseUrl}/Quote/GetCustomerBillingAddress";
 
-
+        public static String GetQuoteData => $"{ApiBaseUrl}/Quote/GetQuoteData";
     }
 }

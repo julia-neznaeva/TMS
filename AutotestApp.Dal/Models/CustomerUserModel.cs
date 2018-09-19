@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AutotestApp.Dal.Models
 {
-    public class CustomerUser
+    public class CustomerUserModel
     {
-
+        public int CustomerId { get; set; } //(int, not null)
+        public int UserId { get; set; } //(int, not null)
     }
 }

@@ -14,7 +14,8 @@ namespace AutotestApp.Dal.Repositories
 {
     public interface IAddressRepositoriy
     {
-        AddressModel GetAddress(String @string, Int32 CustomerId);
+        AddressModel GetBilllingAddress(String @string, Int32 customerId);
+        AddressModel GetDedicatedAddress(Int32 customerId);
     }
 
     public class AddressRepositoriy: IAddressRepositoriy
@@ -25,22 +26,12 @@ namespace AutotestApp.Dal.Repositories
             _ssesion = session;
         }
 
-        //public AddressModel GetAddress(String @string, Int32 customerId)
-        //{
-        //    String query = $"SELECT * from ADDRESS WHERE CustomerId = {@string = customerId.ToString()}";
-
-        //    AddressModel address = _ssesion.Connection.QueryFirstOrDefault<AddressModel>(query);
-
-        //    return address;
-
-        //}
-
         String connectionString => Config.Instance.MyCarrierContext;
 
-        public AddressModel GetAddress(string @string, int CustomerId)
+        public AddressModel GetBilllingAddress(string @string, int customerId)
         {
             AddressModel address;
-            String query = $"SELECT * from ADDRESS WHERE CustomerId = {@string = CustomerId.ToString()}";
+            String query = $"SELECT * from ADDRESS WHERE CustomerId = {@string = customerId.ToString()} and IsBillingAddress = 1";
             using (IDbConnection db = new SqlConnection(connectionString))
             {
                 address = db.QueryFirstOrDefault<AddressModel>(query);
@@ -48,5 +39,16 @@ namespace AutotestApp.Dal.Repositories
             }
             return address;
         }
+
+        public AddressModel GetDedicatedAddress(Int32 customerId)
+        {
+            String query = $"SELECT * from ADDRESS WHERE CustomerId = {customerId.ToString()} and IsThirdPartyBillingEnabled = 1";
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                return db.QueryFirstOrDefault<AddressModel>(query);
+
+            }
+        }
+
     }
 }

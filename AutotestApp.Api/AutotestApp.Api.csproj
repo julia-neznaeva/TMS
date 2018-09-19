@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Api\InventoryApi\BaseApi.cs" />
     <Compile Include="Api\Quote1StepApi\GetCustomerBillingAddressApi.cs" />
+    <Compile Include="Api\Quote1StepApi\GetQuoteDataApi.cs" />
     <Compile Include="Api\TokenApi.cs" />
     <Compile Include="AssertsAccumulator.cs" />
     <Compile Include="Attributes\ApiAttribute.cs" />
@@ -74,10 +75,6 @@
     <Compile Include="Models\Api\RequestData\ProductApi\ProductPostRequestData.cs" />
     <Compile Include="Models\Api\RequestData\ProductApi\ProductRequestDataWitoutPriceTier.cs" />
     <Compile Include="Models\Api\RequestData\ProductApi\Supplier.cs" />
-    <Compile Include="Models\Api\ResponseData\CustomerBillingAddress\BilingAddressTemp.cs" />
-    <Compile Include="Models\Api\ResponseData\CustomerBillingAddress\BillingAddress.cs" />
-    <Compile Include="Models\Api\ResponseData\CustomerBillingAddress\ContactPerson.cs" />
-    <Compile Include="Models\Api\ResponseData\CustomerBillingAddress\Location.cs" />
     <Compile Include="Models\Api\ResponseData\Token\TokenModel.cs" />
     <Compile Include="Models\Api\ResponseData\ErrorResponse\ApiErrorResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

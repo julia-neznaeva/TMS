@@ -10,6 +10,6 @@ namespace AutotestApp.Api.Models.Api.ResponseData.CustomerBillingAddress
     public class BilingAddressTemp
     {
         [DeserializeAs(Name = "billingAddress")]
-        public BillingAddress BillingAddress { get; set; }
+        public Address BillingAddress { get; set; }
     }
 }

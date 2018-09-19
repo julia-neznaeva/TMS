@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutotestApp.Dal.Repositories
+namespace AutotestApp.Bl.Model.CustomerBillingAddress
 {
-    public class LocationRepositoriy
+    public class Customer
     {
+
     }
 }

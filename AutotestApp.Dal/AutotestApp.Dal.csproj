@@ -43,19 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AccessorialModel.cs" />
     <Compile Include="Models\AddressContactModel.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\CustomerInviteModel.cs" />
-    <Compile Include="Models\CustomerUser.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\CustomerUserModel.cs" />
+    <Compile Include="Models\FreightClassModel.cs" />
+    <Compile Include="Models\HolidayModel.cs" />
     <Compile Include="Models\LocationModel.cs" />
+    <Compile Include="Models\PackageTypeModel.cs" />
     <Compile Include="Models\UserPersonalInfoModel.cs" />
+    <Compile Include="Repositories\AccessorialRepository.cs" />
     <Compile Include="Repositories\AddressContactRepositoriy.cs" />
     <Compile Include="Repositories\AddressRepositoriy.cs" />
     <Compile Include="Repositories\ClientRepositoriy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CustomerInviteRepositoriy.cs" />
-    <Compile Include="Repositories\LocationRepositoriy.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\CustomerUserRepositories.cs" />
+    <Compile Include="Repositories\FreightClassRepository.cs" />
+    <Compile Include="Repositories\HolidayRepository.cs" />
+    <Compile Include="Repositories\LocationRepository.cs" />
+    <Compile Include="Repositories\PackageTypeRepository.cs" />
     <Compile Include="Repositories\RepositoriyFactory.cs" />
     <Compile Include="Repositories\UserPersonalInfoRepositoriy.cs" />
     <Compile Include="Session\DapperSession.cs" />

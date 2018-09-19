@@ -1,4 +1,5 @@
-﻿using RestSharp.Deserializers;
+﻿using AutotestApp.Bl.Model.GetQuoteData;
+using RestSharp.Deserializers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AutotestApp.Api.Models.Api.ResponseData.CustomerBillingAddress
 {
-    public class BillingAddress
+    public class Address
     {
         [DeserializeAs(Name = "addressId")]
         public Int32 AddressId { get; set; }
@@ -34,9 +35,9 @@ namespace AutotestApp.Api.Models.Api.ResponseData.CustomerBillingAddress
         [DeserializeAs(Name = "deliveryInstraction")]
         public String DeliveryInstructions { get; set; }
         [DeserializeAs(Name = "lat")]
-        public Double Lat { get; set; }
+        public Decimal? Lat { get; set; }
         [DeserializeAs(Name = "long")]
-        public Double Long { get; set; }
+        public Decimal? Long { get; set; }
         [DeserializeAs(Name = "shippingFromTime")]
         public String ShippingFromTime { get; set; }
         [DeserializeAs(Name = "shippingToTime")]
@@ -52,7 +53,7 @@ namespace AutotestApp.Api.Models.Api.ResponseData.CustomerBillingAddress
         [DeserializeAs(Name = "addressAccessorials")]
         public List<object> AddressAccessorials { get; set; }
         [DeserializeAs(Name = "commercialType")]
-        public String CommercialType { get; set; }
+        public Accessorial CommercialType { get; set; }
     }
 
 }

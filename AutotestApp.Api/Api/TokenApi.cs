@@ -14,11 +14,13 @@ namespace AutotestApp.Common.Api
         {
             _request = new RestRequest(ApiUrl.Token);
             _request.Method = Method.POST;
-            DearClient.Authenticator = new SimpleAuthenticator("username", "kate.test21@gmail.com", "password", "123456789");
         }
 
-        public TokenModel GetToken()
+        //"kate.test21@gmail.com"
+        // "123456789"
+        public TokenModel GetToken(String email, String password)
         {
+            DearClient.Authenticator = new SimpleAuthenticator("username", email, "password", password);
             var response = DearClient.ExecuteUnzipped<TokenModel>(_request);
             return response.Data;
         }

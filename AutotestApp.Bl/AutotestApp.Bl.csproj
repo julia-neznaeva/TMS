@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -38,6 +41,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,7 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\AccessorialType.cs" />
     <Compile Include="GZipHelper.cs" />
+    <Compile Include="Helper\AddressHelper.cs" />
+    <Compile Include="Mapper\AutomapperExtensions.cs" />
+    <Compile Include="Mapper\AutomapperFactory.cs" />
+    <Compile Include="Mapper\BillingMapper\AccessorialMapper.cs" />
+    <Compile Include="Mapper\BillingMapper\BillingAddressMapper.cs" />
+    <Compile Include="Mapper\BillingMapper\CustomerMapper.cs" />
+    <Compile Include="Mapper\BillingMapper\GeneralTypeMapper.cs" />
+    <Compile Include="Mapper\BillingMapper\HolidayMapper.cs" />
+    <Compile Include="Model\CustomerBillingAddress\BilingAddressTemp.cs" />
+    <Compile Include="Model\CustomerBillingAddress\BillingAddress.cs" />
+    <Compile Include="Model\CustomerBillingAddress\ContactPerson.cs" />
+    <Compile Include="Model\CustomerBillingAddress\Customer.cs" />
+    <Compile Include="Model\CustomerBillingAddress\Location.cs" />
+    <Compile Include="Model\GetQuoteData\Accessorial.cs" />
+    <Compile Include="Model\GetQuoteData\Accessorials.cs" />
+    <Compile Include="Model\GetQuoteData\CustomerAddress.cs" />
+    <Compile Include="Model\GetQuoteData\CustomerInfo.cs" />
+    <Compile Include="Model\GetQuoteData\DisabledDate.cs" />
+    <Compile Include="Model\GetQuoteData\Quote.cs" />
+    <Compile Include="Model\GetQuoteData\QuoteResponse.cs" />
+    <Compile Include="Model\GetQuoteData\Type.cs" />
     <Compile Include="QuoteServices\BillingAddressService.cs" />
     <Compile Include="RestSharpExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,5 +90,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
