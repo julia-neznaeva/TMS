@@ -4,7 +4,7 @@ using NUnit.Framework;
 using RestSharp;
 using System;
 using System.Net;
-using System.Reflection;
+
 
 namespace AutotestApp.Common.Api.InventoryApi
 {

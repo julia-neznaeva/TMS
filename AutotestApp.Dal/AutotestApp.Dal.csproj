@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>D:\smart_csharp_mini\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +47,7 @@
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\CustomerInviteModel.cs" />
+    <Compile Include="Models\CustomerUser.cs" />
     <Compile Include="Models\LocationModel.cs" />
     <Compile Include="Models\UserPersonalInfoModel.cs" />
     <Compile Include="Repositories\AddressContactRepositoriy.cs" />

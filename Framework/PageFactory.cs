@@ -1,4 +1,5 @@
-﻿using AutotestsApp.Gui.Forms;
+﻿using AutotestApp.Common;
+using AutotestsApp.Gui.Forms;
 using AutotestsApp.Gui.Pages;
 using AutotetsApp.Gui.Framework.Pages;
 using OpenQA.Selenium;
@@ -21,6 +22,7 @@ namespace AutotetsApp.Gui.Framework
 
         public PagesFactory()
         {
+
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("chrome.switches", "–disable-extensions");
             String isUseGrid = "false";//ConfigurationManager.AppSettings["IsUseGrid"];
@@ -32,7 +34,7 @@ namespace AutotetsApp.Gui.Framework
             }
             else
             {
-                ChromeDriverService service = ChromeDriverService.CreateDefaultService("D:\\smart_csharp_mini\\resources");
+                ChromeDriverService service = ChromeDriverService.CreateDefaultService(Config.Instance.ResourcePath);
                  _driver = new ChromeDriver(service, options, TimeSpan.FromSeconds(60));
                  _driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
             }

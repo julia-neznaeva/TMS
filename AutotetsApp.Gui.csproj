@@ -88,6 +88,7 @@
     <Compile Include="Framework\Configuration.cs" />
     <Compile Include="Framework\Elements\Autocomplite.cs" />
     <Compile Include="Framework\Elements\CheckBox.cs" />
+    <Compile Include="Framework\Elements\Div.cs" />
     <Compile Include="Framework\Elements\Dropdown.cs" />
     <Compile Include="Framework\Elements\NumericStepper.cs" />
     <Compile Include="Framework\Elements\Validation.cs" />

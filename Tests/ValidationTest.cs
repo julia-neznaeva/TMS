@@ -1,10 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
 using AutotestsApp.Gui.Forms;
-using AutotetsApp.Gui.Framework;
 using AutotestsApp.Gui.Pages;
 using AutotetsApp.Gui.Framework.Pages;
-using System.Collections.Generic;
 
 namespace AutotestsApp.Gui.Tests
 {
@@ -32,7 +30,11 @@ namespace AutotestsApp.Gui.Tests
             AssertsAccumulator.Accumulate(() => Assert.AreEqual(ORIGINAL_VALIDATION_MESSAGE, QuotePage.GetOriginValidationMessage()));
 
             AssertsAccumulator.Accumulate(() => Assert.AreEqual(DESTINATION_VALIDATION_MESSAGE, QuotePage.GetDestinationValidationMessage()));
+
+
         }
+
+
 
         [Test]
         public void AllEmpyFieldValidation1()
