@@ -22,7 +22,7 @@ namespace ClassLibrary2
         public void SetToken()
         {
             AutomapperFactory.Initialize();
-            _billingAdressService = new QuoteService(AutomapperFactory.CreateMapper());
+            _billingAdressService = new QuoteService();
         }
 
         [TestCase("kate.test21@gmail.com", "123456789", TestName ="Get Billing address")]

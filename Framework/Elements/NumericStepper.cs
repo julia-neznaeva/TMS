@@ -14,6 +14,15 @@ namespace AutotetsApp.Gui.Framework.Elements
         {
         }
 
+        public void SetText(String text)
+        {
+            WaitElementToBeVisible();
+            GetElement().Click();
+            GetElement().Clear();
+            GetElement().SendKeys(text);
+            Log.Info(String.Format("{0} :: type text '{1}'", GetName(), text));
+        }
+
 
 
     }

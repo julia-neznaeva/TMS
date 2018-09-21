@@ -2,8 +2,9 @@
 using AutotetsApp.Gui.Framework;
 using AutotetsApp.Gui.Framework.Pages;
 using NUnit.Framework;
+using System;
 using System.Diagnostics;
-
+using System.Globalization;
 
 namespace AutotestsApp.Gui.Forms
 {
@@ -13,6 +14,8 @@ namespace AutotestsApp.Gui.Forms
     {
         protected PagesFactory PageFactory { get; private set; }
         protected AssertsAccumulator AssertsAccumulator = new AssertsAccumulator();
+        protected static System.Globalization.CultureInfo CurrentCulture => new CultureInfo("en-UA");
+        protected Random Random = new Random(Environment.TickCount);
 
         [SetUp]
         public void SetUp()
@@ -23,6 +26,7 @@ namespace AutotestsApp.Gui.Forms
         [TearDown]
         public void TearDown()
         {
+            AssertsAccumulator.Release();
             PageFactory.CloseDriver();
 
             var processes = Process.GetProcessesByName(Configuration.GetBrowser());

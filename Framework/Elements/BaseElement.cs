@@ -27,6 +27,12 @@ namespace AutotestsApp.Gui.Elements
             return (RemoteWebElement)Driver.FindElement(_locator); 
         }
 
+        protected RemoteWebElement GetLastElement()
+        {
+            Int32 size =Driver.FindElements(_locator).Count;
+            return (RemoteWebElement)Driver.FindElements(_locator)[size-1];
+        }
+
         protected String GetName()
         {
             return _name;
@@ -41,7 +47,6 @@ namespace AutotestsApp.Gui.Elements
         {
             WaitElementToBeClickable();
             GetElement().Click();
-            //Browser.WaitForPageToLoad();
             Log.Info(String.Format("{0} :: click", GetName()));
         }
 

@@ -15,13 +15,6 @@ namespace AutotestApp.Bl.QuoteServices
 {
     public class QuoteService
     {
-        private readonly IMapper _mapper;
-
-        public QuoteService(IMapper mapper)
-        {
-            _mapper = mapper;
-        }
-
         public Address GetBillingAddress(String email)
         {
             using (ISession session = SessionFactory.Create())

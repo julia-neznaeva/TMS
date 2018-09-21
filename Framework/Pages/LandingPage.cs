@@ -28,7 +28,7 @@ namespace AutotestsApp.Gui.Forms
         {
             _driver.Url = _url;
             _driver.Navigate();
-            new WebDriverWait(_driver, TimeSpan.FromSeconds(50)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.UrlToBe(_url));
+            new WebDriverWait(_driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.UrlToBe(_url));
             return this;
         }
     }

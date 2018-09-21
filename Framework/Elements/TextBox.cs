@@ -14,5 +14,11 @@ namespace AutotestsApp.Gui.Elements
             GetElement().SendKeys(text);
             Log.Info(String.Format("{0} :: type text '{1}'", GetName(), text));
         }
+
+        public void Clear()
+        {
+            WaitElementToBeVisible();
+            GetElement().Clear();
+        }
     }
 }

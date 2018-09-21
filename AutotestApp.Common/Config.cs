@@ -13,6 +13,7 @@ namespace AutotestApp.Common
 
             public Items()
             {
+                String path =  ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None).FilePath;
                 _items = ConfigurationManager.AppSettings;
             }
 

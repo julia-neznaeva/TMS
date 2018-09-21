@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using OpenQA.Selenium;
 using System.Collections.ObjectModel;
+using OpenQA.Selenium.Support.UI;
 
 namespace AutotetsApp.Gui.Framework.Elements
 {
@@ -26,8 +27,9 @@ namespace AutotetsApp.Gui.Framework.Elements
 
         public void SetDropdown(String value)
         {
-            GetElement().FindElementByXPath($"//li/span[contains(text(), '{value}')]").Click();
-            
+            String xpath=$"//li//span[contains(text(), '{value}')]";  
+            new WebDriverWait(Driver, TimeSpan.FromSeconds(5)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(xpath)));
+            GetElement().FindElementByXPath(xpath).Click();
         }
 
         public Dropdown Open()
