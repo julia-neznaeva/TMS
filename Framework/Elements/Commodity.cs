@@ -10,29 +10,39 @@ namespace AutotetsApp.Gui.Framework.Elements
 {
     public class Commodity : BaseElement
     {
-        private Autocomplete _commodityDescription => new Autocomplete(By.XPath("//div[contains(@class, 'itm-list' and contains(@class, 'autocomplete'))]"), "Commodity Description", Driver);
+        private String rootElementXpath;
+        public Int32 CountUnit = 1;
 
-        private TextBox _nmfc => new TextBox(By.XPath("//input[@placeholder= 'NMFC']"), "NMFC", Driver);
-        private Span _nmfcValidator => new Span(By.XPath("//input[@placeholder= 'NMFC']//following-sibling::span[@class = 'error long']"), "NMFC ValidationMessage", Driver);
+        private Autocomplete _commodityDescription => new Autocomplete(By.XPath($"({rootElementXpath}//itm-list[1])//input"), "Commodity Description", Driver);
 
-        private TextBox _sub => new TextBox(By.XPath("//input[@placeholder= 'SUB']"), "SUB", Driver);
-        private Span _subValidator => new Span(By.XPath("//input[@placeholder= 'SUB']//following-sibling::span[@class = 'error long']"), "Sub ValidationMessage", Driver);
+    private TextBox _nmfc => new TextBox(By.XPath($"{rootElementXpath}//input[@placeholder= 'NMFC']"), "NMFC", Driver);
+        private Span _nmfcValidator => new Span(By.XPath($"{rootElementXpath}//input[@placeholder= 'NMFC']//following-sibling::span[@class = 'error long']"), "NMFC ValidationMessage", Driver);
 
-        private Dropdown _class => new Dropdown(By.XPath("//div[contains(@class, 'itm-list') and not( contains(@class, 'autocomplete') )]"), "Class", Driver);
-        private Span _classValidator => new Span(By.XPath("//div[contains(@class, 'itm-list') and not( contains(@class, 'autocomplete') )]//following-sibling::span[@class = 'error long']"), "Class ValidationMessage", Driver);
+        private TextBox _sub => new TextBox(By.XPath($"{rootElementXpath}//input[@placeholder= 'SUB']"), "SUB", Driver);
+        private Span _subValidator => new Span(By.XPath($"{rootElementXpath}//input[@placeholder= 'SUB']//following-sibling::span[@class = 'error long']"), "Sub ValidationMessage", Driver);
 
-        private NumericStepper _pieces => new NumericStepper(By.XPath("//input[@formcontrolname= 'commodityTotalPieces']"), "Piese", Driver);
-        private Span _piecesValidator => new Span(By.XPath("//input[@formcontrolname= 'commodityTotalPieces']//following-sibling::span[@class = 'error long']"), "Pieces ValidationMessage", Driver);
+        private Dropdown _class => new Dropdown(By.XPath($"{rootElementXpath}//div[contains(@class, 'itm-list') and not( contains(@class, 'autocomplete') )]"), "Class", Driver);
+        private Span _classValidator => new Span(By.XPath($"{rootElementXpath}//div[contains(@class, 'itm-list') and not( contains(@class, 'autocomplete') )]//following-sibling::span[@class = 'error long']"), "Class ValidationMessage", Driver);
 
-        private TextBox _totalWeight => new TextBox(By.XPath("//input[@formcontrolname= 'commodityTotalWeight']"), "Piese", Driver);
-        private Span _totalValidator => new Span(By.XPath("//input[@formcontrolname= 'commodityTotalWeight']//following-sibling::span[@class = 'error long']"), "Pieces ValidationMessage", Driver);
+        private NumericStepper _pieces => new NumericStepper(By.XPath($"{rootElementXpath}//input[@formcontrolname= 'commodityTotalPieces']"), "Piese", Driver);
+        private Span _piecesValidator => new Span(By.XPath($"{rootElementXpath}//input[@formcontrolname= 'commodityTotalPieces']//following-sibling::span[@class = 'error long']"), "Pieces ValidationMessage", Driver);
 
-        private CheckBox _hazMat => new CheckBox(By.XPath("//md-checkbox[@formcontrolname ='commodityIsHazardous']"), "HazMat" , Driver);
+        private TextBox _totalWeight => new TextBox(By.XPath($"{rootElementXpath}//input[@formcontrolname= 'commodityTotalWeight']"), "Piese", Driver);
+        private Span _totalValidator => new Span(By.XPath($"{rootElementXpath}//input[@formcontrolname= 'commodityTotalWeight']//following-sibling::span[@class = 'error long']"), "Pieces ValidationMessage", Driver);
 
-        private Button Delete => new Button(By.XPath(""), "Delete Comodity", Driver);
+        private CheckBox _hazMat => new CheckBox(By.XPath($"{rootElementXpath}//md-checkbox[@formcontrolname ='commodityIsHazardous']"), "HazMat" , Driver);
+
+        private Button _delete => new Button(By.XPath($"{rootElementXpath}//div[contains(@class, 'remove-item')]"), "Delete Comodity", Driver);
 
         public Commodity(By locator, string name, IWebDriver driver) : base(locator, name, driver)
         {
+            rootElementXpath = $"//commodity[1]";
+        }
+
+        public Commodity(By locator, string name, IWebDriver driver, Int32 index) : base(locator, name, driver)
+        {
+            CountUnit = index;
+            rootElementXpath = $"//commodity[{CountUnit}]";
         }
 
         public String GetNMFCValidationMessage()
@@ -119,6 +129,21 @@ namespace AutotetsApp.Gui.Framework.Elements
         {
             _hazMat.Click();
             return this;
+        }
+
+        public Commodity SetCommodity(String value)
+      {
+            _commodityDescription.Click();
+            _commodityDescription.InputValueToAutocomplete(value);
+            _commodityDescription.SelectItem(value);
+            return this;
+
+
+        }
+
+        public void Delete()
+        {
+            _delete.Click();
         }
 
     }

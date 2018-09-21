@@ -186,5 +186,43 @@ namespace AutotestsApp.Gui.Tests
 
             QuotePage.ClickOnSelectCarrier();
         }
+
+        [Test]
+        public void LinearFeedAndClassValidation()
+        {
+            LandingPage.Open();
+
+            LandingPage.SignIn();
+
+            LoginPage.LogIn("kate.test21@gmail.com", "123456789");
+
+            QuotePage.Open().
+                SwitchVLTLToggle().
+                SetOriginallDropdownAddress("RT Rotisserie, 101 Oak Street, San Francisco, CA 94102, USA").
+                SetDestinationAutocompleteAddress("Mizyak Test, 1202 Chalet Ln, Do Not Delete – Test Account, Pelham, AL 35124, USA");
+
+            QuotePage.HandingUnit.SetL(QuoteConstants.DIMENSIONS_INTEGER).
+                                  SetW(QuoteConstants.DIMENSIONS_INTEGER).
+                                  SetH(QuoteConstants.DIMENSIONS_INTEGER);
+
+            QuotePage.HandingUnit.Commodity.SetTotalWeight(QuoteConstants.TOTAL_WEIGHT);
+
+            QuotePage.ClickOnSelectCarrier();
+
+            String messageCountValidationMessage = QuotePage.GetLinearFieldValidationMessage();
+
+        }
+
+        [Test]
+        public void TestForCustomerWithoutCarrier()
+        {
+            LandingPage.Open();
+
+            LandingPage.SignIn();
+
+            LoginPage.LogIn("cuswithoutcarrier@yopmail.com", "123456789");
+
+            QuotePage.Open();
+        }
     }
 }

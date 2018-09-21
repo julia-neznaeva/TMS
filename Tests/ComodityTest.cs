@@ -9,8 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AutotetsApp.Gui.Tests
-{ 
-    public class ShipmentItemTests: BaseTest
+{
+    public class ComodityTest: BaseTest
     {
         LandingPage LandingPage => PageFactory.GetPage<LandingPage>();
         LoginPage LoginPage => PageFactory.GetPage<LoginPage>();
@@ -18,7 +18,7 @@ namespace AutotetsApp.Gui.Tests
         QuotePage QuotePage => PageFactory.GetPage<QuotePage>();
 
         [Test]
-        public void TwoShipmentItem()
+        public void ComodityFromProductListWithAllField()
         {
             LandingPage.Open();
 
@@ -34,19 +34,13 @@ namespace AutotetsApp.Gui.Tests
                                   SetW(QuoteConstants.DIMENSIONS_INTEGER).
                                   SetH(QuoteConstants.DIMENSIONS_INTEGER);
 
-            QuotePage.HandingUnit.Commodity.SetClass(QuoteConstants.CLASS).
-                                            SetTotalWeight(QuoteConstants.TOTAL_WEIGHT);
-
-            QuotePage.AddHandleUnit().SetL(QuoteConstants.DIMENSIONS_INTEGER).
-                                  SetW(QuoteConstants.DIMENSIONS_INTEGER).
-                                  SetH(QuoteConstants.DIMENSIONS_INTEGER);
-
+            QuotePage.HandingUnit.Commodity.SetCommodity("Product 2");
             QuotePage.ClickOnSelectCarrier();
 
         }
 
         [Test]
-        public void DeleteShipmentItem()
+        public void TwoCommodyItems()
         {
             LandingPage.Open();
 
@@ -62,20 +56,64 @@ namespace AutotetsApp.Gui.Tests
                                   SetW(QuoteConstants.DIMENSIONS_INTEGER).
                                   SetH(QuoteConstants.DIMENSIONS_INTEGER);
 
-            QuotePage.HandingUnit.Commodity.SetClass(QuoteConstants.CLASS).
+
+            QuotePage.HandingUnit.Commodity.SetCommodity("Product 2").SetTotalWeight(QuoteConstants.TOTAL_WEIGHT);
+            QuotePage.HandingUnit.AddCommodity().SetClass(QuoteConstants.CLASS).
                                             SetTotalWeight(QuoteConstants.TOTAL_WEIGHT);
 
-            QuotePage.AddHandleUnit().SetL(QuoteConstants.DIMENSIONS_INTEGER).
-                                  SetW(QuoteConstants.DIMENSIONS_INTEGER).
-                                  SetH(QuoteConstants.DIMENSIONS_INTEGER).
-                                  Delete();
-
             QuotePage.ClickOnSelectCarrier();
-
         }
 
         [Test]
-        public void ClearShipmentItem()
+        public void DeleteCommodyItems()
+        {
+            LandingPage.Open();
+
+            LandingPage.SignIn();
+
+            LoginPage.LogIn("kate.test21@gmail.com", "123456789");
+
+            QuotePage.Open().
+                SetOriginallDropdownAddress("RT Rotisserie, 101 Oak Street, San Francisco, CA 94102, USA").
+                SetDestinationAutocompleteAddress("Mizyak Test, 1202 Chalet Ln, Do Not Delete – Test Account, Pelham, AL 35124, USA");
+
+            QuotePage.HandingUnit.SetL(QuoteConstants.DIMENSIONS_INTEGER).
+                                  SetW(QuoteConstants.DIMENSIONS_INTEGER).
+                                  SetH(QuoteConstants.DIMENSIONS_INTEGER);
+
+
+            QuotePage.HandingUnit.Commodity.SetCommodity("Product 2").SetTotalWeight(QuoteConstants.TOTAL_WEIGHT);
+            QuotePage.HandingUnit.AddCommodity().SetClass(QuoteConstants.CLASS).
+                                            SetTotalWeight(QuoteConstants.TOTAL_WEIGHT).Delete();
+
+            QuotePage.ClickOnSelectCarrier();
+        }
+
+        [Test]
+        public void ClearCommodyItems()
+        {
+            LandingPage.Open();
+
+            LandingPage.SignIn();
+
+            LoginPage.LogIn("kate.test21@gmail.com", "123456789");
+
+            QuotePage.Open().
+                SetOriginallDropdownAddress("RT Rotisserie, 101 Oak Street, San Francisco, CA 94102, USA").
+                SetDestinationAutocompleteAddress("Mizyak Test, 1202 Chalet Ln, Do Not Delete – Test Account, Pelham, AL 35124, USA");
+
+            QuotePage.HandingUnit.SetL(QuoteConstants.DIMENSIONS_INTEGER).
+                                  SetW(QuoteConstants.DIMENSIONS_INTEGER).
+                                  SetH(QuoteConstants.DIMENSIONS_INTEGER);
+
+
+            QuotePage.HandingUnit.Commodity.SetCommodity("Product 2").SetTotalWeight(QuoteConstants.TOTAL_WEIGHT).Delete();
+
+            QuotePage.ClickOnSelectCarrier();
+        }
+
+        [Test]
+        public void TheSecondCommodityItems()
         {
             LandingPage.Open();
 
@@ -93,11 +131,12 @@ namespace AutotetsApp.Gui.Tests
 
             QuotePage.HandingUnit.Commodity.SetClass(QuoteConstants.CLASS).
                                             SetTotalWeight(QuoteConstants.TOTAL_WEIGHT);
-            QuotePage.HandingUnit.Delete();
 
+            QuotePage.HandingUnit.AddCommodity().SetCommodity("Product 2").SetTotalWeight(QuoteConstants.TOTAL_WEIGHT).Delete();
             QuotePage.ClickOnSelectCarrier();
 
         }
+
 
     }
 }

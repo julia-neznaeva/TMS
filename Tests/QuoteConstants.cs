@@ -20,6 +20,7 @@ namespace AutotetsApp.Gui.Tests
         public const String VALIDATION_NMFC_MIN_LENGTH_MESSAGE = "must be at least 5 characters long";
         public const String VALIDATION_NUMERIC_MESSADE = "should be numeric value";
         public const String VALIDATION_INTEGER_MESSADE = "should be integer value";
+        public const String VALIDATION_LINEAR_MESSAGE = "Linear Feet is required";
         public const Int32 DIMENSIONS_INTEGER = 1;
         public const Int32 DIMENSIONS_INTEGER_MAX = 999;
         public const Decimal DIMENTIONS_DECIMAL = 1.2M;
@@ -33,5 +34,6 @@ namespace AutotetsApp.Gui.Tests
         public const Decimal NMFC_LESS_MIN_LENGTH = 9999;
         public const Decimal SUB_MORE_MAX_LENGTH = 9999;
         public const String ACCESS_SETTING_MESSAGE = "Access Settings Here\r\nSetup Third Party bill to address in settings to enable this function";
+
     }
 }

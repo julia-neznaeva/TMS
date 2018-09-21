@@ -29,6 +29,7 @@ namespace AutotetsApp.Gui.Framework.Pages
         private Span _accessSettings => new Span(By.XPath("//div[@class='access-settings']"), "Access-settings popup", _driver);
         private Toggle _vltlToggle => new Toggle(By.XPath("//div[contains(@class, 'ltl-volume-toggler')]//md-slide-toggle"), "VLTL toggle", _driver);
         private TextBox _linearFeet => new TextBox(By.XPath("//input[@placeholder= 'Linear Feet']"), "Linear Feet", _driver);
+        private Span _linearFeetValidation => new Span(By.XPath("//span[@class = 'error']"), "Linear Feet Validation Message", _driver);
         private TextBox _pickUp => new TextBox(By.XPath("//input[@placeholder  ='mm/dd/yyyy']"), "Pick up field", _driver);
 
         public  HandlingUnit HandingUnit => new HandlingUnit(By.XPath("//handling-unit//div[contains(@class, 'shipment-item')]"), "HandlingUnit", _driver); 
@@ -52,15 +53,21 @@ namespace AutotetsApp.Gui.Framework.Pages
             return this;
         }
 
-        public QuotePage AddHandleUnit()
+        public HandlingUnit AddHandleUnit()
         {
             _addHandingUnit.Click();
-            return this;
+            HandingUnit.CountUnit++;
+            return new HandlingUnit(By.XPath("//handling-unit//div[contains(@class, 'shipment-item')]"), "HandlingUnit", _driver, HandingUnit.CountUnit+1);
         }
 
         public String GetOriginValidationMessage()
         {
             return _originValidation.GetValidationMessage();
+        }
+
+        public String GetLinearFieldValidationMessage()
+        {
+            return _linearFeetValidation.GetText();
         }
 
         public String GetDestinationValidationMessage()

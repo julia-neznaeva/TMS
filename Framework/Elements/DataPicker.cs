@@ -75,11 +75,11 @@ namespace AutotetsApp.Gui.Framework.Elements
             return this;
         }
 
-        public bool IsEnabled(DateTime date)
-        {
-            ////ul[@class = 'days']//li[not((contains(@class, 'disabled')  or contains(@class, 'weekday')))]
-            //return GetElement().GetAttribute()
-        }
+        //public bool IsEnabled(DateTime date)
+        //{
+        //    //ul[@class = 'days']//li[not((contains(@class, 'disabled')  or contains(@class, 'weekday')))]
+        //    return GetElement().GetAttribute()
+        //}
 
         public DataPicker GoToPreviousMonth()
         {
@@ -101,7 +101,7 @@ namespace AutotetsApp.Gui.Framework.Elements
 
         private DataPicker ClickOnDate(DateTime date)
         {
-            Driver.FindElement(By.XPath($"//div[@class='datepicker-component']//li[contains(text(), '{date.Day}')]");
+            Driver.FindElement(By.XPath($"//div[@class='datepicker-component']//li[contains(text(), '{date.Day}')]"));
             return this;
         }
 
